@@ -108,7 +108,7 @@ static int liteeth_rx(struct net_device *netdev)
 	rx_slot = inreg8(priv->base + LITEETH_WRITER_SLOT);
 	len = inreg32(priv->base + LITEETH_WRITER_LENGTH);
 
-	skb = netdev_alloc_skb(netdev, len);
+	skb = netdev_alloc_skb(netdev, len + NET_IP_ALIGN);
 	if (!skb) {
 		netdev_err(netdev, "couldn't get memory");
 		netdev->stats.rx_dropped++;
