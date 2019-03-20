@@ -251,7 +251,7 @@ void __init setup_arch(char **cmdline_p)
 #endif
 
 	DBG();
-	DBGMSG("cmdline is '%s'", *cmdline_p);
+	//DBGMSG("cmdline is '%s'", *cmdline_p);
 	parse_early_param();
 
         DBGMSG("sptbr = %X", csr_read(sptbr));

@@ -596,9 +596,9 @@ asmlinkage __visible void __init start_kernel(void)
 	mm_init_cpumask(&init_mm);
 	DBGMSG("CPU MASK DONE");
 
-        DBGMSG("Setting up the command line '%s'", command_line);
+    //DBGMSG("Setting up the command line '%s'", command_line);
 	setup_command_line(command_line);
-	DBGMSG("Finished. command_line='%s' boot_command_line='%s'", command_line, boot_command_line);
+	//DBGMSG("Finished. command_line='%s' boot_command_line='%s'", command_line, boot_command_line);
 
 	DBGMSG("CMD_LINE DONE");
 
